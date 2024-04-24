@@ -2,7 +2,7 @@
 
 namespace Producer;
 
-public class PgDbContext : DbContext
+public class PgDbContext(DbContextOptions<PgDbContext> options) : DbContext(options)
 {
-    public DbSet<Product> Products { get; set; }
+    public DbSet<Quote> Quotes { get; set; }
 }

@@ -2,7 +2,7 @@
 
 namespace Producer;
 
-public class OraDbContext : DbContext
+public class OraDbContext(DbContextOptions<OraDbContext> options) : DbContext(options)
 {
-    public DbSet<Product> Products { get; set; }
+    public DbSet<QuoteOra> Quotes { get; set; }
 }
